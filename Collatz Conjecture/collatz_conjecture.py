@@ -42,7 +42,8 @@ def main(args):
             print("Please supply a number like this: \n" + sys.argv[0] + " 12")
     else:
         startNum = input("Please enter a starting number: ")
-        results = collatz(startNum)
+        if startNum.isdigit():
+            results = collatz(startNum)
     
     print(results)
 
