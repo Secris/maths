@@ -18,7 +18,6 @@ def collatz(x):
     x = int(x)
     result = []
 
-    print("collatz: " + str(x))
     while(x >= 1):
         result.append(math.trunc(x))
         # Abort if 1 has been reached
