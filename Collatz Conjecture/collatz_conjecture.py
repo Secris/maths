@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 '''
 Each number is obtained from the previous iteration.
 Start with x
@@ -15,7 +16,6 @@ import sys, math
 
 def collatz(x):
     # Do collatz stuff
-    x = int(x)
     result = []
 
     while(x >= 1):
@@ -36,13 +36,15 @@ def main(args):
     results = "ERROR: No result"
     if len(args) >= 1:
         if args[0].isdigit():
-            results = collatz(args[0])
+            num = int(args[0])
+            results = collatz(num)
         else:
             print("Please supply a number like this: \n" + sys.argv[0] + " 12")
     else:
         startNum = input("Please enter a starting number: ")
         if startNum.isdigit():
-            results = collatz(startNum)
+            num = int(startNum)
+            results = collatz(num)
     
     print(results)
 
@@ -50,3 +52,4 @@ def main(args):
 if __name__ == "__main__":
     # execute only if run as a script
     main(sys.argv[1:])
+
