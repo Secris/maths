@@ -1,11 +1,9 @@
-﻿using System.Linq.Expressions;
-
-/*
+﻿/*
     Start with x
     If x is odd 3x+1
     If x is even x/2
+    Repeat until you reach 1
 */
-
 
 string user_input = "";
 int x = 0;
